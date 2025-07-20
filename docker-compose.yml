@@ -1,0 +1,79 @@
+version: "3.8"
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:16-alpine
+    container_name: luxor_postgres
+    environment:
+      POSTGRES_DB: BD_LUXOR
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+    volumes:
+      - luxor_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - luxor_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # pgAdmin
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: luxor_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@luxor.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - luxor_network
+
+  # Django Backend
+  backend:
+    build: ./backend
+    container_name: luxor_backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_NAME: BD_LUXOR
+      DB_USER: postgres
+      DB_PASSWORD: postgres123
+      DB_HOST: db
+      DB_PORT: 5432
+    command: >
+      sh -c "sleep 15 && python manage.py runserver 0.0.0.0:8000"
+    networks:
+      - luxor_network
+
+  # React Frontend
+  frontend:
+    build: ./frontend
+    container_name: luxor_frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - luxor_network
+
+volumes:
+  luxor_postgres_data:
+
+networks:
+  luxor_network:
+    driver: bridge

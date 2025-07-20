@@ -1,0 +1,37 @@
+# Archivos temporales de Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Entorno virtual (si usas uno localmente fuera de Docker)
+venv/
+env/
+.venv/
+
+# Archivos de configuración sensibles
+*.local
+local_settings.py
+
+# Archivos generados por Django
+*.log
+*.pot
+*.sqlite3  # Si usas SQLite localmente (no aplica en tu caso porque usas PostgreSQL)
+db.sqlite3
+
+# Archivos generados por el sistema o editores
+.DS_Store
+*.swp
+*~
+
+# Archivos de caché
+.cache/
+*.cache
+
+# Archivos de migraciones (opcional, dependiendo de tu flujo de trabajo)
+# migrations/  # Descomenta si no quieres incluir migraciones en el repositorio
+
+# Archivos de entorno o secretos
+.env

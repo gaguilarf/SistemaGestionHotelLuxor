@@ -1,0 +1,653 @@
+================================================================================
+                        MANUAL DE USUARIO
+                   SISTEMA DE GESTIÓN HOTELERA LUXOR
+================================================================================
+
+VERSIÓN: 1.0.0
+FECHA: 20 de Julio de 2025
+DIRIGIDO A: Personal operativo y administrativo del hotel
+
+================================================================================
+ÍNDICE DE CONTENIDOS
+================================================================================
+
+1. INTRODUCCIÓN AL SISTEMA
+2. ACCESO AL SISTEMA
+3. NAVEGACIÓN PRINCIPAL
+4. MÓDULO DE HABITACIONES
+5. MÓDULO DE CLIENTES
+6. MÓDULO DE USUARIOS
+7. MÓDULO DE REPORTES
+8. FUNCIONES ADMINISTRATIVAS
+9. SOLUCIÓN DE PROBLEMAS COMUNES
+10. CONSEJOS Y MEJORES PRÁCTICAS
+
+================================================================================
+1. INTRODUCCIÓN AL SISTEMA
+================================================================================
+
+¡Bienvenido al Sistema de Gestión Hotelera Luxor!
+
+Este sistema ha sido diseñado para facilitar la administración diaria de su 
+establecimiento hotelero. Con una interfaz intuitiva y funciones automatizadas, 
+podrá gestionar eficientemente:
+
+✓ Habitaciones y su disponibilidad
+✓ Registro de huéspedes y clientes
+✓ Check-in y check-out
+✓ Reportes de ocupación e ingresos
+✓ Administración de usuarios del sistema
+
+REQUISITOS PARA USAR EL SISTEMA:
+- Computadora con conexión a internet
+- Navegador web actualizado (Chrome, Firefox, Safari, Edge)
+- Credenciales de acceso proporcionadas por el administrador
+
+================================================================================
+2. ACCESO AL SISTEMA
+================================================================================
+
+2.1 INGRESO AL SISTEMA
+------------------------------------------------------------------------
+
+PASO 1: Abrir el navegador web
+- Escriba la dirección: http://localhost:5173
+- O la dirección proporcionada por su administrador
+
+PASO 2: Pantalla de inicio de sesión
+- Ingrese su NOMBRE DE USUARIO
+- Ingrese su CONTRASEÑA
+- Haga clic en "INICIAR SESIÓN"
+
+PASO 3: Verificación exitosa
+- Si los datos son correctos, será redirigido al panel principal
+- Si hay error, verifique sus credenciales e intente nuevamente
+
+2.2 PRIMERA VEZ EN EL SISTEMA
+------------------------------------------------------------------------
+
+Si es su primer acceso:
+1. Contacte al administrador para obtener sus credenciales
+2. Cambie su contraseña inicial por una personal y segura
+3. Complete su información de perfil
+4. Familiarícese con la interfaz siguiendo este manual
+
+2.3 CERRAR SESIÓN
+------------------------------------------------------------------------
+
+IMPORTANTE: Siempre cierre sesión al terminar
+1. Haga clic en el botón "CERRAR SESIÓN" (ícono de salida)
+2. Confirme que desea salir del sistema
+3. Cierre el navegador por seguridad
+
+================================================================================
+3. NAVEGACIÓN PRINCIPAL
+================================================================================
+
+3.1 PANEL DE CONTROL (DASHBOARD)
+------------------------------------------------------------------------
+
+Al ingresar verá el PANEL PRINCIPAL con:
+
+BARRA SUPERIOR:
+- Logo del sistema
+- Menú de navegación principal
+- Información del usuario conectado
+- Botón de cerrar sesión
+
+MENÚ PRINCIPAL:
+- DASHBOARD: Resumen general
+- HABITACIONES: Gestión de habitaciones
+- CLIENTES: Administración de huéspedes
+- USUARIOS: Gestión de personal (solo administradores)
+- REPORTES: Informes y estadísticas
+- ADMIN: Funciones administrativas
+
+3.2 NAVEGACIÓN ENTRE MÓDULOS
+------------------------------------------------------------------------
+
+Para cambiar de módulo:
+1. Haga clic en el nombre del módulo en el menú superior
+2. El sistema cargará la nueva sección
+3. Use el botón "Atrás" del navegador si necesita regresar
+
+INDICADORES VISUALES:
+- El módulo activo se muestra resaltado
+- Los botones cambian de color al pasar el cursor
+- Las acciones exitosas muestran mensajes verdes
+- Los errores se muestran en rojo
+
+================================================================================
+4. MÓDULO DE HABITACIONES
+================================================================================
+
+4.1 VISTA GENERAL DE HABITACIONES
+------------------------------------------------------------------------
+
+ACCESO: Menú principal > HABITACIONES
+
+En esta sección podrá:
+- Ver todas las habitaciones del hotel
+- Conocer el estado actual de cada habitación
+- Buscar habitaciones específicas
+- Crear, editar o eliminar habitaciones
+
+ESTADOS DE HABITACIONES:
+🟢 DISPONIBLE: Lista para ocupar
+🔴 OCUPADO: Con huésped actual
+🟡 SUCIO: Necesita limpieza
+🔧 MANTENIMIENTO: En reparación
+
+4.2 BUSCAR HABITACIONES
+------------------------------------------------------------------------
+
+OPCIONES DE BÚSQUEDA:
+- Por número de habitación
+- Por tipo (Simple, Doble, Triple, Familiar)
+- Por estado actual
+- Por rango de precios
+
+CÓMO BUSCAR:
+1. Use la barra de búsqueda en la parte superior
+2. Escriba el número o seleccione filtros
+3. Los resultados se actualizan automáticamente
+4. Use "Limpiar filtros" para ver todas las habitaciones
+
+4.3 CREAR NUEVA HABITACIÓN
+------------------------------------------------------------------------
+
+PASO A PASO:
+1. Haga clic en "NUEVA HABITACIÓN"
+2. Complete el formulario:
+   - NÚMERO: Número único de habitación (ej: 101, 205)
+   - TIPO: Seleccione Simple, Doble, Triple o Familiar
+   - PRECIO POR NOCHE: Ingrese el precio en soles
+   - DESCRIPCIÓN: Opcional, detalles adicionales
+3. Haga clic en "GUARDAR"
+4. La habitación aparecerá en la lista
+
+VALIDACIONES AUTOMÁTICAS:
+- El número debe ser único
+- El precio debe ser mayor a 0
+- Todos los campos obligatorios deben completarse
+
+4.4 EDITAR HABITACIÓN EXISTENTE
+------------------------------------------------------------------------
+
+PASOS:
+1. Busque la habitación en la lista
+2. Haga clic en el ícono de "EDITAR" (lápiz)
+3. Modifique los campos necesarios
+4. Haga clic en "ACTUALIZAR"
+5. Los cambios se guardan inmediatamente
+
+NOTA: No puede cambiar el número si la habitación está ocupada
+
+4.5 CAMBIAR ESTADO DE HABITACIÓN
+------------------------------------------------------------------------
+
+ESTADOS Y TRANSICIONES:
+
+DISPONIBLE → OCUPADO:
+- Se hace automáticamente al asignar un cliente
+
+OCUPADO → SUCIO:
+- Al hacer check-out del cliente
+- Indica que necesita limpieza
+
+SUCIO → DISPONIBLE:
+- Después de la limpieza
+- Lista para nuevo huésped
+
+CUALQUIER ESTADO → MANTENIMIENTO:
+- Para reparaciones o mantenimiento
+- No se puede asignar a clientes
+
+MANTENIMIENTO → DISPONIBLE:
+- Al completar las reparaciones
+
+4.6 VER DETALLES DE HABITACIÓN
+------------------------------------------------------------------------
+
+Para ver información completa:
+1. Haga clic en el número de habitación
+2. Se abrirá una ventana con:
+   - Información básica
+   - Historial de ocupación
+   - Cliente actual (si aplica)
+   - Fechas importantes
+
+================================================================================
+5. MÓDULO DE CLIENTES
+================================================================================
+
+5.1 GESTIÓN DE CLIENTES Y HUÉSPEDES
+------------------------------------------------------------------------
+
+ACCESO: Menú principal > CLIENTES
+
+FUNCIONES PRINCIPALES:
+- Registrar nuevos huéspedes
+- Buscar clientes existentes
+- Realizar check-in y check-out
+- Ver historial de hospedajes
+- Gestionar reservas
+
+5.2 REGISTRAR NUEVO CLIENTE
+------------------------------------------------------------------------
+
+PASO A PASO:
+1. Haga clic en "NUEVO CLIENTE"
+2. Complete la información personal:
+
+DATOS OBLIGATORIOS:
+- NOMBRES: Nombres completos
+- APELLIDOS: Apellidos completos
+- TIPO DE DOCUMENTO: DNI, Pasaporte o Carnet de extranjería
+- NÚMERO DE DOCUMENTO: Según el tipo seleccionado
+- HABITACIONES DESEADAS: Cantidad de habitaciones
+- TIPO DE PAGO: Efectivo, Billetera digital o Visa
+- MONTO PAGADO: Cantidad pagada por el cliente
+
+DATOS OPCIONALES:
+- EDAD: Edad del huésped
+- TELÉFONO: Número de contacto
+- DIRECCIÓN: Dirección de residencia
+- FECHA DE INGRESO: Cuándo ingresa
+- FECHA DE SALIDA: Cuándo se retira
+
+3. Haga clic en "GUARDAR CLIENTE"
+
+5.3 VALIDACIONES IMPORTANTES
+------------------------------------------------------------------------
+
+EL SISTEMA VALIDA:
+- DNI: Debe tener exactamente 8 dígitos
+- Pasaporte/Carnet: Hasta 30 caracteres alfanuméricos
+- Teléfono: Entre 7 y 15 dígitos
+- Monto: Debe ser mayor a 0
+- Fechas: La salida debe ser posterior al ingreso
+
+CLIENTE DUPLICADO:
+- Si el documento ya existe, el sistema le preguntará si desea:
+  * Crear un nuevo registro (para re-hospedaje)
+  * Actualizar el registro existente
+
+5.4 ASIGNAR HABITACIONES (CHECK-IN)
+------------------------------------------------------------------------
+
+PROCESO DE CHECK-IN:
+1. Registre o busque el cliente
+2. En la lista de clientes, haga clic en "ASIGNAR HABITACIONES"
+3. Seleccione las habitaciones disponibles:
+   - Solo se muestran habitaciones DISPONIBLES
+   - Puede asignar múltiples habitaciones
+4. Confirme la asignación
+5. Las habitaciones cambian automáticamente a OCUPADO
+
+VERIFICACIONES AUTOMÁTICAS:
+- Disponibilidad de habitaciones
+- Cantidad solicitada vs. disponible
+- Estado válido de las habitaciones
+
+5.5 LIBERAR HABITACIONES (CHECK-OUT)
+------------------------------------------------------------------------
+
+PROCESO DE CHECK-OUT:
+1. Busque el cliente en la lista
+2. Haga clic en "LIBERAR HABITACIONES"
+3. Seleccione las habitaciones a liberar
+4. Confirme la liberación
+5. Las habitaciones cambian a estado SUCIO
+6. Se registra la fecha real de salida
+
+DESPUÉS DEL CHECK-OUT:
+- El cliente mantiene su historial
+- Las habitaciones quedan marcadas para limpieza
+- Se puede generar reporte de la estadía
+
+5.6 BUSCAR CLIENTES
+------------------------------------------------------------------------
+
+OPCIONES DE BÚSQUEDA:
+- Por nombre o apellido
+- Por número de documento
+- Por fecha de ingreso
+- Por estado (activo/liberado)
+
+FILTROS AVANZADOS:
+- Clientes actualmente hospedados
+- Clientes con check-out pendiente
+- Historial por rango de fechas
+
+5.7 VER HISTORIAL DE CLIENTE
+------------------------------------------------------------------------
+
+Para ver el historial completo:
+1. Haga clic en el nombre del cliente
+2. Se mostrará:
+   - Información personal
+   - Habitaciones asignadas actualmente
+   - Historial de hospedajes anteriores
+   - Fechas de ingreso y salida
+   - Montos pagados
+
+================================================================================
+6. MÓDULO DE USUARIOS
+================================================================================
+
+6.1 GESTIÓN DE USUARIOS DEL SISTEMA
+------------------------------------------------------------------------
+
+ACCESO: Menú principal > USUARIOS
+NOTA: Solo disponible para administradores
+
+FUNCIONES:
+- Crear cuentas de usuario
+- Asignar roles y permisos
+- Activar/desactivar usuarios
+- Ver historial de accesos
+
+6.2 CREAR NUEVO USUARIO
+------------------------------------------------------------------------
+
+INFORMACIÓN REQUERIDA:
+- NOMBRE DE USUARIO: Único en el sistema
+- EMAIL: Dirección de correo electrónico
+- NOMBRES Y APELLIDOS: Información personal
+- DNI: Documento de identidad
+- TELÉFONO: Número de contacto
+- CONTRASEÑA: Segura y temporal
+
+ROLES DISPONIBLES:
+- ADMINISTRADOR: Acceso completo al sistema
+- RECEPCIONISTA: Gestión de clientes y habitaciones
+- SUPERVISOR: Acceso a reportes y supervisión
+
+6.3 GESTIONAR PERMISOS
+------------------------------------------------------------------------
+
+PERMISOS POR MÓDULO:
+- Ver, crear, editar, eliminar habitaciones
+- Ver, crear, editar, eliminar clientes
+- Acceso a reportes
+- Gestión de usuarios
+- Funciones administrativas
+
+ASIGNACIÓN:
+1. Seleccione el usuario
+2. Marque los permisos correspondientes
+3. Guarde los cambios
+
+================================================================================
+7. MÓDULO DE REPORTES
+================================================================================
+
+7.1 TIPOS DE REPORTES DISPONIBLES
+------------------------------------------------------------------------
+
+ACCESO: Menú principal > REPORTES
+
+REPORTES PRINCIPALES:
+- OCUPACIÓN HOTELERA: Estado actual y histórico
+- INGRESOS: Análisis financiero por período
+- CLIENTES: Estadísticas de huéspedes
+- HABITACIONES: Rendimiento por habitación
+
+7.2 REPORTE DE OCUPACIÓN
+------------------------------------------------------------------------
+
+INFORMACIÓN INCLUIDA:
+- Porcentaje de ocupación actual
+- Habitaciones disponibles/ocupadas
+- Tendencias por período
+- Comparativas mensuales
+
+CÓMO GENERAR:
+1. Seleccione "Reporte de Ocupación"
+2. Elija el rango de fechas
+3. Seleccione filtros adicionales
+4. Haga clic en "GENERAR REPORTE"
+5. El reporte se muestra con gráficos
+
+7.3 REPORTE DE INGRESOS
+------------------------------------------------------------------------
+
+DATOS MOSTRADOS:
+- Ingresos totales por período
+- Ingresos por tipo de habitación
+- Comparativas mensuales/anuales
+- Proyecciones
+
+OPCIONES DE FILTRO:
+- Por rango de fechas
+- Por tipo de habitación
+- Por método de pago
+
+7.4 EXPORTAR REPORTES
+------------------------------------------------------------------------
+
+FORMATOS DISPONIBLES:
+- PDF: Para impresión y archivo
+- EXCEL: Para análisis adicional
+- CSV: Para importar en otros sistemas
+
+PASOS PARA EXPORTAR:
+1. Genere el reporte deseado
+2. Haga clic en "EXPORTAR"
+3. Seleccione el formato
+4. El archivo se descarga automáticamente
+
+================================================================================
+8. FUNCIONES ADMINISTRATIVAS
+================================================================================
+
+8.1 PANEL DE ADMINISTRACIÓN
+------------------------------------------------------------------------
+
+ACCESO: Menú principal > ADMIN
+NOTA: Solo para administradores del sistema
+
+FUNCIONES DISPONIBLES:
+- Configuración general del sistema
+- Respaldos de base de datos
+- Logs del sistema
+- Mantenimiento de datos
+
+8.2 CONFIGURACIÓN DEL SISTEMA
+------------------------------------------------------------------------
+
+PARÁMETROS CONFIGURABLES:
+- Información del hotel
+- Tipos de habitación personalizados
+- Métodos de pago aceptados
+- Configuración de reportes
+
+8.3 RESPALDOS Y MANTENIMIENTO
+------------------------------------------------------------------------
+
+RESPALDOS AUTOMÁTICOS:
+- Se realizan diariamente
+- Se mantienen por 30 días
+- Incluyen todos los datos del sistema
+
+MANTENIMIENTO:
+- Limpieza de logs antiguos
+- Optimización de base de datos
+- Verificación de integridad
+
+================================================================================
+9. SOLUCIÓN DE PROBLEMAS COMUNES
+================================================================================
+
+9.1 PROBLEMAS DE ACCESO
+------------------------------------------------------------------------
+
+PROBLEMA: No puedo iniciar sesión
+SOLUCIÓN:
+1. Verifique que las credenciales sean correctas
+2. Asegúrese de que Caps Lock esté desactivado
+3. Contacte al administrador si persiste el problema
+
+PROBLEMA: El sistema me desconecta automáticamente
+SOLUCIÓN:
+1. Es normal después de 60 minutos de inactividad
+2. Guarde su trabajo frecuentemente
+3. Vuelva a iniciar sesión
+
+9.2 PROBLEMAS CON HABITACIONES
+------------------------------------------------------------------------
+
+PROBLEMA: No puedo cambiar el estado de una habitación
+SOLUCIÓN:
+1. Verifique que tenga permisos suficientes
+2. Asegúrese de que la transición sea válida
+3. Libere al cliente antes de cambiar a mantenimiento
+
+PROBLEMA: Una habitación no aparece como disponible
+SOLUCIÓN:
+1. Verifique que no tenga cliente asignado
+2. Revise el estado actual
+3. Complete el proceso de limpieza si está "sucia"
+
+9.3 PROBLEMAS CON CLIENTES
+------------------------------------------------------------------------
+
+PROBLEMA: No puedo registrar un cliente
+SOLUCIÓN:
+1. Verifique que todos los campos obligatorios estén completos
+2. Asegúrese de que el formato del documento sea correcto
+3. Revise que el monto sea mayor a 0
+
+PROBLEMA: Error al asignar habitaciones
+SOLUCIÓN:
+1. Verifique que las habitaciones estén disponibles
+2. Asegúrese de que la cantidad solicitada esté disponible
+3. Actualice la página y vuelva a intentar
+
+9.4 PROBLEMAS CON REPORTES
+------------------------------------------------------------------------
+
+PROBLEMA: Los reportes no cargan
+SOLUCIÓN:
+1. Verifique su conexión a internet
+2. Reduzca el rango de fechas
+3. Actualice la página
+
+PROBLEMA: No puedo exportar reportes
+SOLUCIÓN:
+1. Asegúrese de que el reporte esté completamente cargado
+2. Verifique que su navegador permita descargas
+3. Intente con un formato diferente
+
+================================================================================
+10. CONSEJOS Y MEJORES PRÁCTICAS
+================================================================================
+
+10.1 USO EFICIENTE DEL SISTEMA
+------------------------------------------------------------------------
+
+RECOMENDACIONES DIARIAS:
+✓ Inicie sesión al comenzar su turno
+✓ Revise el estado de todas las habitaciones
+✓ Actualice información de clientes regularmente
+✓ Genere reportes al final del día
+✓ Cierre sesión al terminar
+
+ORGANIZACIÓN:
+✓ Use filtros para encontrar información rápidamente
+✓ Mantenga actualizada la información de contacto
+✓ Registre observaciones importantes en las descripciones
+✓ Verifique datos antes de guardar
+
+10.2 SEGURIDAD Y BUENAS PRÁCTICAS
+------------------------------------------------------------------------
+
+SEGURIDAD DE DATOS:
+✓ No comparta sus credenciales de acceso
+✓ Use contraseñas seguras
+✓ Cierre sesión en computadoras compartidas
+✓ Reporte actividades sospechosas
+
+CALIDAD DE DATOS:
+✓ Verifique la información del cliente al registrar
+✓ Mantenga actualizados los estados de habitaciones
+✓ Registre fechas y horarios correctamente
+✓ Use descripciones claras y útiles
+
+10.3 ATENCIÓN AL CLIENTE
+------------------------------------------------------------------------
+
+PROCESO DE CHECK-IN:
+1. Salude cordialmente al huésped
+2. Verifique su documento de identidad
+3. Confirme los datos en el sistema
+4. Explique las facilidades del hotel
+5. Entregue la información de la habitación
+
+PROCESO DE CHECK-OUT:
+1. Consulte sobre la satisfacción de la estadía
+2. Verifique el estado de la habitación
+3. Procese el check-out en el sistema
+4. Entregue comprobantes si es necesario
+5. Agradezca la preferencia
+
+10.4 MANTENIMIENTO PREVENTIVO
+------------------------------------------------------------------------
+
+REVISIONES REGULARES:
+✓ Estado de habitaciones cada turno
+✓ Información de clientes activos
+✓ Disponibilidad para nuevas reservas
+✓ Funcionamiento del sistema
+
+COMUNICACIÓN:
+✓ Reporte problemas técnicos inmediatamente
+✓ Comunique cambios importantes al siguiente turno
+✓ Mantenga informado al supervisor
+✓ Documente incidencias relevantes
+
+================================================================================
+INFORMACIÓN DE CONTACTO Y SOPORTE
+================================================================================
+
+SOPORTE TÉCNICO:
+- Para problemas del sistema: Contactar al administrador
+- Para capacitación adicional: Solicitar sesión de entrenamiento
+- Para sugerencias de mejora: Enviar feedback al equipo de desarrollo
+
+HORARIOS DE SOPORTE:
+- Lunes a Viernes: 8:00 AM - 6:00 PM
+- Sábados: 9:00 AM - 2:00 PM
+- Emergencias: Contactar al supervisor de turno
+
+RECURSOS ADICIONALES:
+- Manual técnico: Para administradores del sistema
+- Videos tutoriales: Disponibles en el portal interno
+- FAQ: Preguntas frecuentes actualizadas
+
+================================================================================
+ACTUALIZACIONES DEL MANUAL
+================================================================================
+
+VERSIÓN 1.0.0 - Julio 2025:
+- Manual inicial completo
+- Todas las funcionalidades principales documentadas
+- Procedimientos paso a paso incluidos
+
+Para sugerencias de mejora a este manual, contacte al equipo de desarrollo.
+
+================================================================================
+FIN DEL MANUAL DE USUARIO
+================================================================================
+
+¡Gracias por usar el Sistema de Gestión Hotelera Luxor!
+
+Este manual está diseñado para ayudarle a aprovechar al máximo todas las 
+funcionalidades del sistema. Manténgalo a mano como referencia rápida y no 
+dude en consultarlo siempre que tenga dudas.
+
+Recuerde: Un uso eficiente del sistema mejora la experiencia de sus huéspedes 
+y optimiza las operaciones del hotel.
+
+¡Éxito en su gestión hotelera!
